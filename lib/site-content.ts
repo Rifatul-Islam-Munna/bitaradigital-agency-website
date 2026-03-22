@@ -1,6 +1,6 @@
 import { supplementalBlogPosts } from "./supplemental-blog-posts"
 
-export const SITE_URL = "https://bitaradigitalit.com"
+export const SITE_URL = "https://www.bitaradigitalit.com"
 export const PHARMACY_URL = "http://pharmacy.bitaradigitalit.com/"
 
 export const siteConfig = {
