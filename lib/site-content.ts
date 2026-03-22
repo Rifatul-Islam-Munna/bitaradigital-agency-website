@@ -8,9 +8,9 @@ export const siteConfig = {
   shortName: "Bitara",
   title: "Bitara Digital | Custom Websites, SaaS Applications & UI/UX Design",
   description:
-    "Bitara builds custom websites, SaaS applications, UI/UX design, branding, and digital solutions using the latest technologies. We transform your vision into powerful digital products that drive growth.",
+    "Bitara builds custom websites, SaaS applications, UI/UX design systems, and on-page SEO foundations for growth-focused businesses.",
   longDescription:
-    "Bitara is a digital agency focused on custom websites, SaaS delivery, UI/UX design, branding, APIs, and ongoing optimization for businesses that need performance, clarity, and trust.",
+    "Bitara is a digital agency focused on custom websites, SaaS applications, UI/UX design, branding, APIs, and on-page SEO foundations for businesses that need performance, clarity, and trust.",
   contactEmail: "hello@bitaradigitalit.com",
   defaultOgImage: "/modern-web-development-illustration-minimal-clean.jpg",
   logo: "/images/a-modern-minimalistic-logo-design-featur-rf3nccuwtiafdas1upnr7q-9cqj-xrwqww3mah610jw2w.jpeg",

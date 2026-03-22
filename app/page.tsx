@@ -34,7 +34,7 @@ import {
 } from "@/lib/site-content"
 
 export const metadata: Metadata = {
-  title: "Custom Websites, SaaS Applications & SEO-Ready Digital Experiences",
+  title: "Custom Websites, SaaS Applications & UI/UX Design",
   description: siteConfig.description,
   keywords: [
     ...primaryKeywords,
@@ -154,14 +154,14 @@ export default function Page() {
                 </div>
                 <div className="space-y-6">
                   <h1 className="max-w-4xl font-serif text-5xl leading-[0.98] tracking-[-0.04em] text-primary sm:text-7xl lg:text-[5.8rem]">
-                    Building
+                    Custom websites,
                     {" "}
-                    <span className="italic text-secondary">modern, scalable</span>
+                    <span className="italic text-secondary">SaaS applications,</span>
                     {" "}
-                    digital experiences.
+                    and UI/UX design.
                   </h1>
                   <p className="max-w-2xl text-lg leading-8 text-foreground/65 sm:text-xl">
-                    {siteConfig.description}
+                    Bitara builds custom websites, SaaS applications, and UI/UX design systems with on-page SEO, fast performance, and clearer conversion paths.
                   </p>
                 </div>
                 <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -209,13 +209,14 @@ export default function Page() {
                       alt="Bitara custom website and SaaS design illustration"
                       fill
                       priority
+                      sizes="(min-width: 1280px) 34rem, (min-width: 1024px) 42vw, 100vw"
                       className="object-cover"
                     />
                   </div>
                 </div>
                 <div className="ambient-shadow mt-4 w-full rounded-[1.6rem] bg-white p-5 sm:absolute sm:-bottom-6 sm:right-6 sm:mt-0 sm:max-w-xs">
                   <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-secondary">Live Proof</p>
-                  <h2 className="mt-3 font-serif text-2xl leading-tight text-primary">Pharmacy SaaS Platform</h2>
+                  <h2 className="mt-3 font-serif text-2xl leading-tight text-primary">Live Pharmacy SaaS Demo</h2>
                   <p className="mt-3 text-sm leading-7 text-foreground/62">
                     A live SaaS project that helps visitors trust Bitara through a working product, not only portfolio claims.
                   </p>
@@ -261,7 +262,7 @@ export default function Page() {
                 Elevating brands through strategic precision.
               </h2>
               <p className="max-w-2xl text-base leading-8 text-foreground/62 sm:text-lg">
-                Your current Bitara service offering remains here, reworked into the stitch visual system instead of being replaced by generic filler.
+                Bitara delivers custom websites, SaaS applications, backend systems, UI/UX design, branding, and optimization for businesses that need clearer digital growth.
               </p>
             </div>
             <div className="mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -381,6 +382,7 @@ export default function Page() {
                         src={project.image}
                         alt={project.alt}
                         fill
+                        sizes={index === 0 ? "(min-width: 1024px) 60vw, 100vw" : "(min-width: 1024px) 50vw, 100vw"}
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>
@@ -477,7 +479,13 @@ export default function Page() {
                   className="group rounded-[1.75rem] bg-white p-4 ambient-shadow transition-transform hover:-translate-y-1"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden rounded-[1.4rem] bg-[color:var(--surface-container-low)]">
-                    <Image src={post.image} alt={post.alt} fill className="object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" />
+                    <Image
+                      src={post.image}
+                      alt={post.alt}
+                      fill
+                      sizes="(min-width: 1024px) 30vw, 100vw"
+                      className="object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                    />
                   </div>
                   <div className="space-y-4 px-2 py-5">
                     <div className="flex items-center gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-foreground/45">
@@ -503,7 +511,7 @@ export default function Page() {
                 On-page SEO is handled through structure, metadata, content depth, and internal links, not empty promises.
               </h2>
               <p className="max-w-2xl text-base leading-8 text-foreground/64 sm:text-lg">
-                No one can honestly guarantee a numeric SEO score before real auditing tools run, but this build includes the right on-page foundations: semantic page structure, indexable content, static articles, FAQ content, structured data, metadata, sitemap, robots, internal linking, and descriptive image alt text.
+                Strong on-page SEO comes from consistent technical and content signals. This build includes semantic page structure, indexable copy, static articles, FAQ content, structured data, metadata, sitemap output, robots rules, internal linking, and descriptive image alt text.
               </p>
             </div>
             <div className="space-y-4">

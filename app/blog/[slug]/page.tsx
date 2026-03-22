@@ -170,7 +170,14 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </div>
 
             <div className="relative aspect-[21/9] overflow-hidden rounded-[1.75rem] bg-[color:var(--surface-container-low)] ambient-shadow">
-              <Image src={post.image} alt={post.alt} fill priority className="object-cover" />
+              <Image
+                src={post.image}
+                alt={post.alt}
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
@@ -264,6 +271,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                           src={relatedPost.image}
                           alt={relatedPost.alt}
                           fill
+                          sizes="(min-width: 1280px) 22rem, (min-width: 1024px) 20rem, 100vw"
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
                         />
                       </div>
@@ -300,3 +308,5 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     </>
   )
 }
+
+

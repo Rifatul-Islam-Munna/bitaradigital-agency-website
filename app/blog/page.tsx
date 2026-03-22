@@ -146,7 +146,14 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             {featuredPost ? (
               <article className="grid overflow-hidden rounded-[1.75rem] bg-white ambient-shadow lg:grid-cols-[1.12fr_0.88fr]">
                 <Link href={postPath(featuredPost.slug)} className="relative block aspect-[16/11] lg:aspect-auto">
-                  <Image src={featuredPost.image} alt={featuredPost.alt} fill priority className="object-cover" />
+                  <Image
+                    src={featuredPost.image}
+                    alt={featuredPost.alt}
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 55vw, 100vw"
+                    className="object-cover"
+                  />
                   <span className="absolute left-6 top-6 rounded-full bg-secondary px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white">
                     Featured Article
                   </span>
@@ -215,6 +222,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                       src={post.image}
                       alt={post.alt}
                       fill
+                      sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
                       className="object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
                     />
                   </div>
@@ -259,3 +267,5 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     </>
   )
 }
+
+
