@@ -329,10 +329,10 @@ export default function Page() {
             <div className="max-w-3xl space-y-4">
               <p className="eyebrow">Market Coverage</p>
               <h2 className="font-serif text-4xl leading-tight tracking-[-0.03em] text-primary sm:text-5xl">
-                Positioned for clients in Bangladesh, the USA, the UK, and Europe.
+                Serving businesses across Bangladesh, the United States, the United Kingdom, and Europe.
               </h2>
               <p className="max-w-2xl text-base leading-8 text-foreground/62 sm:text-lg">
-                The site copy and keyword targeting now support regional search intent while keeping the brand presentation professional and close to the editorial stitch direction.
+                Bitara works with growing brands, service businesses, and product teams that need modern websites, SaaS platforms, and clearer digital presentation for both local and international markets.
               </p>
             </div>
             <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
