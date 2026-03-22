@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --background: #f8f9fc;
+  --foreground: #191c1e;
+  --card: #ffffff;
+  --card-foreground: #191c1e;
+  --popover: #ffffff;
+  --popover-foreground: #191c1e;
+  --primary: #0b1d44;
+  --primary-foreground: #ffffff;
+  --secondary: #6a38d4;
+  --secondary-foreground: #ffffff;
+  --muted: #f2f3f6;
+  --muted-foreground: #5f6470;
+  --accent: #8455ee;
+  --accent-foreground: #ffffff;
+  --border: rgba(11, 29, 68, 0.1);
+  --input: rgba(11, 29, 68, 0.12);
+  --ring: #6a38d4;
+  --surface-container-low: #f2f3f6;
+  --surface-container-high: #e7e8eb;
+  --surface-container-highest: #e1e2e5;
+  --surface-container-lowest: #ffffff;
+  --outline-variant: #c5c6cf;
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", Georgia, serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at top right, rgba(106, 56, 212, 0.08), transparent 24rem),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(248, 249, 252, 1) 40%);
+    text-rendering: optimizeLegibility;
+  }
+
+  a,
+  button,
+  input,
+  textarea {
+    @apply transition-colors;
+  }
+
+  ::selection {
+    background: rgba(106, 56, 212, 0.22);
+  }
+}
+
+@layer utilities {
+  .section-shell {
+    @apply mx-auto max-w-[88rem] px-6 sm:px-8 lg:px-10;
+  }
+
+  .editorial-gradient {
+    background-image: linear-gradient(135deg, #0b1d44 0%, #6a38d4 100%);
+  }
+
+  .glass-nav {
+    background: rgba(248, 249, 252, 0.82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  .ambient-shadow {
+    box-shadow: 0 20px 40px rgba(11, 29, 68, 0.06);
+  }
+
+  .eyebrow {
+    @apply text-[0.68rem] font-semibold uppercase tracking-[0.35em] text-secondary;
+  }
+
+  .marquee {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 2rem;
+  }
+
+  .marquee-track {
+    display: flex;
+    min-width: 100%;
+    flex-shrink: 0;
+    gap: 2rem;
+    animation: marquee-scroll 24s linear infinite;
+  }
+
+  .article-copy p {
+    @apply text-base leading-8 text-foreground/72 sm:text-lg;
+  }
+
+  .article-copy ul {
+    @apply space-y-3 pl-5 text-base leading-8 text-foreground/72 sm:text-lg;
+  }
+
+  .article-copy li {
+    @apply list-disc;
+  }
+
+  .article-dropcap::first-letter {
+    @apply mr-4 float-left font-serif text-6xl text-primary sm:text-7xl;
+    line-height: 0.9;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .marquee-track {
+    animation-duration: 30s;
+  }
+}
