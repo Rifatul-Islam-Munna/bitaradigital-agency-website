@@ -1,8 +1,14 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Analytics } from "@vercel/analytics/next"
-import { absoluteUrl, primaryKeywords, regionalKeywords, siteConfig } from "@/lib/site-content"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import {
+  absoluteUrl,
+  primaryKeywords,
+  regionalKeywords,
+  siteConfig,
+} from "@/lib/site-content";
+import "./globals.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL(absoluteUrl("/")),
@@ -58,19 +64,40 @@ export const metadata: Metadata = {
     shortcut: siteConfig.logo,
     apple: siteConfig.logo,
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
       <body>
         {children}
         <Analytics />
+        <Script
+          id="chatwoot-widget"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+      (function(d,t) {
+        var BASE_URL="https://ohsitapp-chatwoot.6ybj83.easypanel.host";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'MttkcEwDYSLfJ5XVnVzD6LAw',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    `,
+          }}
+        />
       </body>
     </html>
-  )
+  );
 }
